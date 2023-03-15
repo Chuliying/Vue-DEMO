@@ -1,0 +1,208 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap");
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  padding: 16px 25px;
+  text-align: center;
+}
+label {
+  font-size: 15px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+textarea {
+  resize: none;
+  width: 100%;
+  min-height: 250px;
+  padding: 15px;
+}
+input {
+  display: inline-block;
+  font-size: 18px;
+  padding: 12px;
+  margin-bottom: 25px;
+  width: 100%;
+  user-select: none !important;
+  &[type="checkbox"] {
+    border-radius: 100%;
+    display: inline;
+    width: auto;
+    margin: 0;
+    margin-right: 8px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    vertical-align: middle;
+  }
+  &[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+  }
+  &[type="search"] {
+    display: inline-block;
+    width: 85%;
+    margin-left: 0;
+  }
+}
+.iframeContainer {
+  position: relative;
+  padding-bottom: 60%;
+  margin: 25px auto;
+  iframe {
+    position: absolute;
+    max-width: 100%;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.alertText {
+  position: absolute;
+  color: red;
+}
+.bg {
+  position: fixed;
+  background-color: #f7f7f7;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -99999;
+  &.userPage {
+    background-color: #f7f7f7;
+  }
+}
+.container {
+  max-width: 360px;
+  margin: auto;
+}
+p {
+  font-size: 17px;
+  line-height: 1.55em;
+  color: #222;
+}
+h1 {
+  font-size: 25px;
+  margin-bottom: 35px;
+  line-height: 1.35em;
+}
+hr {
+  border: none;
+  margin: 50px auto;
+}
+h2 {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+h4 {
+  font-size: 14px;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignRight {
+  text-align: right;
+}
+.alignCenter {
+  text-align: center;
+}
+
+.fontBold {
+  font-weight: bold;
+}
+
+.closeButton {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  width: 22px;
+  height: 22px;
+  &:before,
+  &:after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 23px;
+    width: 2px;
+    background-color: #fff;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.menuPage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
+  height: 100%;
+  width: 100%;
+  background-color: #555;
+  padding: 25px;
+  color: #fff;
+  overflow: auto;
+  h2 {
+    text-align: center;
+    margin: 35px auto;
+  }
+  p {
+    color: #fff;
+  }
+
+  .card {
+    padding: 15px;
+    background-color: #fff;
+    margin: 25px auto;
+    display: flex;
+    .img {
+      position: relative;
+      width: 30%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .companyLogo {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    .info {
+      padding-left: 35px;
+      flex: 1;
+      p {
+        color: #000;
+        text-align: left;
+        font-size: 14px;
+      }
+      .companyName {
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+      .title {
+        font-size: 12px;
+      }
+      .name {
+        margin-top: -12px;
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
+      .email {
+        margin-bottom: -10px;
+      }
+      .phone {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
